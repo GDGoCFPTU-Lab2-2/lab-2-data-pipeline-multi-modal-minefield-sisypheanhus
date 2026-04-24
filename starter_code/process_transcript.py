@@ -20,11 +20,6 @@ def clean_transcript(file_path):
     cleaned = re.sub(r'\n\s*\n', '\n', cleaned).strip()
     cleaned = re.sub(r'  +', ' ', cleaned)
 
-    vn_price_map = {
-        'một': 1, 'hai': 2, 'ba': 3, 'bốn': 4, 'năm': 5,
-        'sáu': 6, 'bảy': 7, 'tám': 8, 'chín': 9, 'mười': 10,
-    }
-
     detected_price_vnd = None
     if 'năm trăm nghìn' in text:
         detected_price_vnd = 500000
